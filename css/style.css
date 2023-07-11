@@ -10,3 +10,138 @@ img {
 ul {
   list-style: none;
 }
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #FAF6ED;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.estrutura {
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+
+.header {
+  grid-column: 3 / -1;
+  background-color: #FFBB55;
+  margin: 30px 0;
+}
+
+.header nav ul {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.header nav ul a {
+  color: black;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.875rem;
+  letter-spacing: .1rem;
+}
+
+.principal {
+  grid-column: 2 / 4;
+  padding: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 90px 300px 1fr;
+  gap: 20px;
+}
+
+.principal section {
+  margin-bottom: 4rem;
+}
+
+.principal h1 {
+  grid-column: span 3;
+  font-family: 'Playfair Display SC', georgia;;
+  font-weight: normal;
+  font-size: 6rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.animais-lista {
+  grid-column: 2;
+  height: 370px;
+  overflow-y: auto;
+}
+
+.animais-lista img {
+  display: block;
+}
+
+.animais-descricao div {
+  margin-bottom: 3rem;
+}
+
+.animais-descricao h2 {
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #E54;
+  letter-spacing: .1rem;
+  margin-bottom: 16px;
+}
+
+.animais-descricao h2:before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  background-color: #FB5;
+  margin-right: 10px;
+}
+
+.animais-descricao p {
+  margin-bottom: 16px;
+}
+
+.faq-lista {
+  grid-column: 2 / -1;
+}
+
+.faq-lista dt {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #E54;
+  margin-top: 32px;
+}
+
+.faq-lista dt:before, .contato .dados li:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-color: #FB5;
+  margin-right: 10px;
+}
+
+.faq-lista dd {
+  margin: 10px 30px;
+}
+
+.mapa {
+  grid-column: 2;
+}
+
+.contato ul li + li {
+  margin-top: 16px;
+}
+
+.footer {
+  grid-column: 3 / -1;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  background-color: #FFBB55;
+  margin-bottom: 30px;
+  padding: 20px;
+}
