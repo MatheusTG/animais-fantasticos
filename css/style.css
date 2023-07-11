@@ -18,6 +18,8 @@ a {
 body {
   background-color: #FAF6ED;
   font-family: Helvetica, Arial, sans-serif;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
 }
 
 .estrutura {
@@ -74,6 +76,16 @@ body {
   grid-column: 2;
   height: 370px;
   overflow-y: auto;
+}
+
+.animais-lista::-webkit-scrollbar {
+  width: 18px;
+}
+
+.animais-lista::-webkit-scrollbar-thumb {
+  background-color: #FB5;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
 }
 
 .animais-lista img {
@@ -144,4 +156,43 @@ body {
   background-color: #FFBB55;
   margin-bottom: 30px;
   padding: 20px;
+}
+
+@media (max-width: 700px) {
+  .header {
+    margin-top: 0;
+  }
+
+  .estrutura {
+    grid-template-columns: 1fr;
+  }
+
+  .header, .principal, .footer{
+    grid-column: 1;
+  }
+
+  .faq-lista, .mapa, .dados {
+    grid-column: 1 / -1;
+  }
+
+  .estrutura h1 {
+    font-size: 3rem;
+  }
+
+  .container {
+    grid-template-columns: 100px 1fr;
+    gap: 0;
+  }
+
+  .animais-lista {
+    grid-column: 1;
+  }
+
+  .animais-descricao {
+    margin-left: 20px;
+  }
+
+  .footer {
+    margin: 0;
+  }
 }
