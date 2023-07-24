@@ -76,6 +76,7 @@ body {
   grid-column: 2;
   height: 370px;
   overflow-y: auto;
+  cursor: pointer;
 }
 
 .animais-lista::-webkit-scrollbar {
@@ -94,6 +95,10 @@ body {
 
 .animais-descricao div {
   margin-bottom: 3rem;
+}
+
+.js .animais-descricao div {
+  display: none;
 }
 
 .animais-descricao h2 {
@@ -194,5 +199,21 @@ body {
 
   .footer {
     margin: 0;
+  }
+}
+
+.active {
+  display: block !important;
+  animation: show .5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
