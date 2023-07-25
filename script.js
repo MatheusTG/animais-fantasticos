@@ -57,3 +57,22 @@ function initScrollSuave() {
   });
 }
 initScrollSuave()
+
+function initAnimationScroll() {
+  const sections = document.querySelectorAll('.js-scroll')
+
+  sections.forEach((value) => {
+    value.style.opacity = '0'
+  })
+
+  function animaScroll() {
+    sections.forEach((value) => {
+      if (value.getBoundingClientRect().top - window.innerHeight * 0.6 < 0) {
+        value.style.animation = 'show .3s forwards'
+      }
+    })
+  }
+
+  window.addEventListener('scroll', animaScroll)
+}
+initAnimationScroll()
