@@ -1,2 +1,3 @@
-const nome = "Matheus"
-console.log(nome)
+import initTabNavigation from "./tab-navigation.js";
+
+initTabNavigation()
