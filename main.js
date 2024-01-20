@@ -10,23 +10,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./js/modules/accordion-list.js":
+/*!**************************************!*\
+  !*** ./js/modules/accordion-list.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initAccordionList)\n/* harmony export */ });\nfunction initAccordionList() {\n  var accordionListDT = document.querySelectorAll(\"[data-accordion] dt\");\n  if (accordionListDT.length) {\n    accordionListDT[0].classList.add('active');\n    accordionListDT.forEach(function (value) {\n      value.addEventListener('click', function (event) {\n        event.target.classList.toggle('active');\n      });\n    });\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos2/./js/modules/accordion-list.js?");
+
+/***/ }),
+
+/***/ "./js/modules/tab-navigation.js":
+/*!**************************************!*\
+  !*** ./js/modules/tab-navigation.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initTabNavigation)\n/* harmony export */ });\nfunction initTabNavigation() {\n  var animaisImagens = document.querySelectorAll('[data-tab-menu] .animais-lista li');\n  var animaisDescricao = document.querySelectorAll('[data-tab-menu] .animais-descricao > div');\n  function activeTab(index) {\n    animaisDescricao.forEach(function (div) {\n      div.classList.remove('active');\n    });\n    animaisDescricao[index].classList.add('active');\n  }\n  if (animaisImagens && animaisDescricao) {\n    activeTab(0);\n    animaisImagens.forEach(function (value, index) {\n      value.addEventListener('click', function () {\n        activeTab(index);\n      });\n    });\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos2/./js/modules/tab-navigation.js?");
+
+/***/ }),
+
 /***/ "./js/script.js":
 /*!**********************!*\
   !*** ./js/script.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tab_navigation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tab-navigation.js */ \"./js/tab-navigation.js\");\n\n(0,_tab_navigation_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://animais-fantasticos2/./js/script.js?");
-
-/***/ }),
-
-/***/ "./js/tab-navigation.js":
-/*!******************************!*\
-  !*** ./js/tab-navigation.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initTabNavigation)\n/* harmony export */ });\nfunction initTabNavigation() {\n  var animaisImagens = document.querySelectorAll('[data-tab-menu] .animais-lista li');\n  var animaisDescricao = document.querySelectorAll('[data-tab-menu] .animais-descricao > div');\n  function activeTab(index) {\n    animaisDescricao.forEach(function (div) {\n      div.classList.remove('active');\n    });\n    animaisDescricao[index].classList.add('active');\n  }\n  if (animaisImagens && animaisDescricao) {\n    activeTab(0);\n    animaisImagens.forEach(function (value, index) {\n      value.addEventListener('click', function () {\n        activeTab(index);\n      });\n    });\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos2/./js/tab-navigation.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_tab_navigation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tab-navigation.js */ \"./js/modules/tab-navigation.js\");\n/* harmony import */ var _modules_accordion_list_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/accordion-list.js */ \"./js/modules/accordion-list.js\");\n\n\n(0,_modules_tab_navigation_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_accordion_list_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://animais-fantasticos2/./js/script.js?");
 
 /***/ })
 
