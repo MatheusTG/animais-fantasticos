@@ -1,6 +1,7 @@
 :root {
-  --corp01: #FFBB55;
-  --corp02: #E54
+  --corp01: #ffbb55;
+  --corp02: #e54;
+  --corp03: #3f4;
 }
 
 * {
@@ -24,7 +25,7 @@ ul {
 
 .titulo {
   grid-column: 2/4;
-  font-family: 'Playfair Display SC';
+  font-family: "Playfair Display SC";
   font-size: 6rem;
   line-height: 1;
   font-weight: 400;
