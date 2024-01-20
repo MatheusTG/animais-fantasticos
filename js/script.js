@@ -1,7 +1,8 @@
 import initTabNavigation from "./modules/tab-navigation.js";
 import initAccordionList from "./modules/accordion-list.js";
-import initScrollSuave from "./modules/scrollSuave.js";
+import ScrollSuave from "./modules/scrollSuave.js";
 
 initTabNavigation();
 initAccordionList();
-initScrollSuave();
+const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]')
+scrollSuave.init()
