@@ -31,3 +31,16 @@ ul {
   font-weight: 400;
   margin-bottom: 40px;
 }
+
+[data-animation] {
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(-30px, 0, 0);
+  
+}
+
+[data-animation].active {
+  opacity: 1;
+  transition: .3s;
+  transform: translate3d(0, 0, 0);
+}
