@@ -20,7 +20,7 @@
         <li><a href="#">Sobre</a></li>
         <li><a href="#faq">Faq</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="./login.html" data-modal="abrir">Login</a></li>
       </ul>
     </nav>
 
@@ -139,6 +139,18 @@
       <p>Todos os direitos reservados.</p>
     </footer>
   </article>
+
+  <section class="modal-container" data-modal="container">
+    <div class="modal">
+      <button class="fechar" data-modal="fechar">X</button>
+      <form action=""></form>
+      <label for="email">Email</label>
+      <input type="email" for="email" id="email">
+      <label for="senha">Senha</label>
+      <input type="password" for="senha" id="senha">
+      <button type="submit">Entrar</button>
+    </div>
+  </section>
 
   <script type="module" src="main.js"></script>
 </body>
