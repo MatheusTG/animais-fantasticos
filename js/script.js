@@ -3,7 +3,7 @@ import Accordion from "./modules/accordion-list.js";
 import TabNav from "./modules/tabnav.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
-import initAnimaisFetch from "./modules/fetch-animais.js";
+import fetchAnimais from "./modules/fetch-animais.js";
 import initAnimacaoScroll from "./modules/animacao-scroll.js";
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
@@ -25,5 +25,5 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-initAnimaisFetch();
+fetchAnimais("../../animaisapi.json", '.numeros-grid');
 initAnimacaoScroll();
