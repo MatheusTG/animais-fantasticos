@@ -30,3 +30,10 @@
     margin-bottom: 40px;
   }
 }
+
+.bitcoin {
+  background-color: var(--corp03);
+  padding: .2rem .5rem;
+  font-weight: bold;
+  border-radius: 2px;
+}
