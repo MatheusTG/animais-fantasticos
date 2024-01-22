@@ -25,8 +25,11 @@ export default function initTooltip() {
     },
   };
 
-  function onMouseOver() {
+  function onMouseOver(event) {
     const tooltipBox = criarTooltipBox(this);
+
+    tooltipBox.style.top = `${event.pageY + 20}px`;
+    tooltipBox.style.left = `${event.pageX + 20}px`;
 
     onMouseMove.tooltipBox = tooltipBox;
     onMouseLeave.tooltipBox = tooltipBox;
