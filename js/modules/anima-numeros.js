@@ -1,28 +1,54 @@
-export default function initAnimaNumeros() {
-  function animaNumeros() {
-    const numeros = document.querySelectorAll("[data-numero]");
-    numeros.forEach((numero) => {
-      const total = numero.innerText;
-      const incremento = total / 100;
+export default class AnimaNumeros {
+  constructor(numeros, observerTarget, observerClass) {
+    this.numeros = document.querySelectorAll(numeros);
+    this.observerTarget = document.querySelector(observerTarget);
+    this.observerClass = observerClass
 
-      let start = 0;
-      const timer = setInterval(() => {
-        start += incremento;
-        numero.innerText = Math.floor(start);
-        if (start > total) {
-          numero.innerText = total;
-          clearInterval(timer);
-        }
-      }, 25 * Math.random());
-    });
+    this.handleMutation = this.handleMutation.bind(this)
   }
 
-  let observer
-  const observerTarget = document.querySelector(".numeros");
-  function handleMutation() {
-    observer.disconnect()
-    animaNumeros();
+  // Recebe um elemento do dom, com número em seu texto
+  // incrementa a portir de 0 até o número final
+  static incrementarNumero(numero) {
+    const total = numero.innerText;
+    const incremento = total / 100;
+
+    let start = 0;
+    const timer = setInterval(() => {
+      start += incremento;
+      numero.innerText = Math.floor(start);
+      if (start > total) {
+        numero.innerText = total;
+        clearInterval(timer);
+      }
+    }, 25 * Math.random());
   }
-  observer = new MutationObserver(handleMutation);
-  observer.observe(observerTarget, { attributes: true });
+
+  // Ativa incrementar número para cada
+  // número selecionado do dom
+  animaNumeros() {
+    this.numeros.forEach(this.constructor.incrementarNumero);
+  }
+
+  // Ocorre quando as mutações ocorrerem
+  handleMutation(mutation) {
+    if (mutation[0].target.classList.contains(this.observerClass)) {
+      this.observer.disconnect();
+      this.animaNumeros();
+    }
+  }
+  
+  // Adiciona o MutationObserver para verificar quando
+  // a classe aitvo é adicionada ao target
+  addMutationObserver() {
+    this.observer = new MutationObserver(this.handleMutation);
+    this.observer.observe(this.observerTarget, { attributes: true });
+  }
+
+  init() {
+    if (this.numeros.length && this.observerTarget) {
+      this.addMutationObserver();
+    }
+    return this
+  }
 }
