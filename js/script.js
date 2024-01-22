@@ -1,8 +1,9 @@
-import ScrollSuave from "./modules/scrollSuave.js";
+import ScrollSuave from "./modules/scroll-suave.js";
 import Accordion from "./modules/accordion-list.js";
 import TabNav from "./modules/tabnav.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
+import initAnimaNumeros from "./modules/anima-numeros.js";
 import initAnimacaoScroll from "./modules/animacao-scroll.js";
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
@@ -24,4 +25,5 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
+initAnimaNumeros();
 initAnimacaoScroll();
