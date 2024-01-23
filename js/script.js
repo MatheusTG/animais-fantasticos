@@ -27,9 +27,9 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-fetchAnimais("../../animaisapi.json", ".numeros-grid");
+fetchAnimais("./animaisapi.json", ".numeros-grid");
 FetchBitcoin("https://blockchain.info/ticker", '.bitcoin');
-  
+
 const scrollAnima = new ScrollAnima("[data-animation]")
 scrollAnima.init()
 
