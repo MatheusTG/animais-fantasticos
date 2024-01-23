@@ -31,6 +31,21 @@
   }
 }
 
+.funcionamento::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: red;
+  margin-left: 4px;
+}
+
+.funcionamento.aberto::after {
+  background-color: var(--corp03);
+}
+
 .bitcoin {
   background-color: var(--corp03);
   padding: .2rem .5rem;
