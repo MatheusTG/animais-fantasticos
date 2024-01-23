@@ -26,8 +26,6 @@ export default class ScrollAnima {
     this.distance.forEach((item) => {
       if (window.scrollY > item.offset) {
         item.element.classList.add("active");
-      } else if (item.element.classList.contains("active")) {
-        item.element.classList.remove("active");
       }
     });
   }
