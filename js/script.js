@@ -6,7 +6,7 @@ import Tooltip from "./modules/tooltip.js";
 import fetchAnimais from "./modules/fetch-animais.js";
 import FetchBitcoin from "./modules/fetch-bitcoin.js";
 import ScrollAnima from "./modules/scroll-anima.js";
-import initdropdownMenu from "./modules/dropdown-menu"
+import DropdownMenu from "./modules/dropdown-menu"
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -27,10 +27,11 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-fetchAnimais("./animaisapi.json", ".numeros-grid");
+fetchAnimais("animaisapi.json", ".numeros-grid");
 FetchBitcoin("https://blockchain.info/ticker", '.bitcoin');
 
 const scrollAnima = new ScrollAnima("[data-animation]")
 scrollAnima.init()
 
-initdropdownMenu()
+const dropdownMenu = new DropdownMenu("[data-dropdown]")
+dropdownMenu.init()
