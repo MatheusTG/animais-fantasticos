@@ -27,4 +27,7 @@
     grid-column: 1;
     margin-bottom: 40px;
   }
+  .numeros-grid h3 {
+    font-size: 1.5rem;
+  }
 }

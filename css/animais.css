@@ -74,4 +74,7 @@
     grid-column: 1/-1;
     margin-bottom: 40px;
   }
+  .animais .titulo {
+    margin-bottom: 30px;
+  }
 }
