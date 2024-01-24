@@ -8,7 +8,7 @@ import FetchBitcoin from "./modules/fetch-bitcoin.js";
 import ScrollAnima from "./modules/scroll-anima.js";
 import DropdownMenu from "./modules/dropdown-menu"
 import MenuMobile from "./modules/menu-mobile.js"
-import initFuncionamento from "./modules/funcionamento.js"
+import Funcionamento from "./modules/funcionamento.js"
 
 const scrollSuave = new ScrollSuave('[data-scroll="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -41,4 +41,5 @@ dropdownMenu.init()
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]')
 menuMobile.init()
 
-initFuncionamento()
+const funcionamento = new Funcionamento("[data-semana]", 'aberto')
+funcionamento.init()
