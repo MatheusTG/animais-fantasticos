@@ -27,7 +27,6 @@ export default class Funcionamento {
     const horarioAberto =
       this.horarioAgora >= this.horarioSemana[0] &&
       this.horarioAgora < this.horarioSemana[1];
-    console.log(this.horarioAgora);
     return semanaAberto && horarioAberto;
   }
 
@@ -43,5 +42,6 @@ export default class Funcionamento {
       this.dadosAgora();
       this.ativaAberto();
     }
+    return this
   }
 }
