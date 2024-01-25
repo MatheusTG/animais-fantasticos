@@ -25,3 +25,15 @@
     margin-top: 0px;
   }
 }
+
+.arrow-black {
+  background: url('../img/arrow-black.svg') no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
+  transition: 0.3s;
+}
+
+.link-login:hover .arrow-black {
+  transform: translate3d(3px, 0, 0);
+}

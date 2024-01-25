@@ -14,8 +14,8 @@ export default class MenuMobile {
     this.openMenu = this.openMenu.bind(this)
   }
 
-  openMenu() {
-    console.log(this.menuButton)
+  openMenu(event) {
+    event.preventDefault()
     this.menuList.classList.add(this.activeClass)
     this.menuButton.classList.add(this.activeClass)
     outideClick(this.menuList, this.events, () => {

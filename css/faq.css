@@ -29,11 +29,18 @@
 }
 
 [data-accordion] dt::after {
-  content: ' ▲';
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url("../img/arrow-red.svg") no-repeat center center;
+  margin-left: 8px;
+  transform: rotate(-90deg);
 }
 
 [data-accordion] dt.active::after {
-  content: ' ▼';
+  content: '';
+  transform: rotate(90deg);
 }
 
 [data-accordion] dt.active + dd {
