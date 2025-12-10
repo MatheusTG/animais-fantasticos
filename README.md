@@ -32,7 +32,7 @@ npm install
 ## ▪️Project Structure
 
 ```
-fantastic-animals/
+animais-fantasticos/
 ├── docs/
 │
 ├── css/
